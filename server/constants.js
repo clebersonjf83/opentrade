@@ -19,8 +19,8 @@ exports.share = {
    tradeEnabled: true,
    withdrawEnabled: true,
    recaptchaEnabled: true,
-   emailVerificationEnabled: 'enabled', //'disabled' // !!! WARNING !!! DANGER !!! DO NOT CHANGE IT IN PRODUCTION !!! FOR TESTS ONLY !!!
-   pinVerificationEnabled: 'enabled', //'disabled'
+   emailVerificationEnabled: 'diabled', //'disabled' // !!! WARNING !!! DANGER !!! DO NOT CHANGE IT IN PRODUCTION !!! FOR TESTS ONLY !!!
+   pinVerificationEnabled: 'disabled', //'disabled'
    
    TRADE_COMISSION: 0.001, //change trade comission percent
    DUST_VOLUME: 0.000001, //change minimal order volume
