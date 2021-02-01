@@ -40,7 +40,7 @@ function UpdateMCFromLB()
   const MC_price = storage.getItem("MC_BTC_Price");
   const g_MC_BTC_Price = (MC_price == null || !MC_price.value) ? 1000000 : MC_price.value;
   
-  const MC = coinNameToTicker[utils.MAIN_COIN] ? coinNameToTicker[utils.MAIN_COIN].ticker || 'FREAK' : 'FREAK';
+  const MC = coinNameToTicker[utils.MAIN_COIN] ? coinNameToTicker[utils.MAIN_COIN].ticker || 'MC' : 'MC';
   
   fetch('/bitcoinaverage/ticker-all-currencies/')
     .then(response => {
