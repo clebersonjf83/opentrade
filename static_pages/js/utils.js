@@ -163,7 +163,7 @@ const utils =
     },
     CreateSocket: function(onmessage, onopen)
     {
-        socket = new WebSocket("wss://"+window.location.hostname+":"+PORT_SSL);
+        socket = new WebSocket("wss://161.97.133.251:"+PORT_SSL);
 //        socket = new WebSocket("wss://"+window.location.hostname);
         socket.onmessage = onmessage;
         socket.onopen = onopen;
