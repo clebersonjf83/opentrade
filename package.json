@@ -10,8 +10,12 @@
     "express": "latest",
     "ws": "latest",
     "sendmail": "latest",
-    "sqlite3": "latest",
     "ejs": "latest",
     "cors": "latest"
+  }
+}
+{
+  "resolutions": {
+    "@keyv/sqlite/**/sqlite3": "4.0.9"
   }
 }
