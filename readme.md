@@ -23,7 +23,15 @@ nvm install 12.6.0
 git clone --recurse-submodules https://github.com/freakcoderz/opentrade.git
 cd opentrade
 
-[sudo] npm install 
+sudo npm install
+sudo npm install -g node-gyp
+sudo PATH="$PATH:/usr/local/bin" npm install -g grunt-cli
+sudo npm install sqlite3 --build-from-source
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+ln -s /usr/bin/nodejs /usr/bin/node
+
 [sudo] npm install -g forever
 ```
 
