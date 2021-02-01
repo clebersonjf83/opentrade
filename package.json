@@ -13,7 +13,7 @@
     "ejs": "latest",
     "cors": "latest"
   }
-}
+},
 {
   "resolutions": {
     "@keyv/sqlite/**/sqlite3": "4.0.9"
