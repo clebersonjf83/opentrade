@@ -38,7 +38,7 @@ function UpdateMCFromLB()
   const coinNameToTicker = cntObject.value;
 
   const MC_price = storage.getItem("MC_BTC_Price");
-  const g_MC_BTC_Price = (MC_price == null || !MC_price.value) ? 100000000 : MC_price.value;
+  const g_MC_BTC_Price = (MC_price == null || !MC_price.value) ? 10000000 : MC_price.value;
   
   const MC = coinNameToTicker[utils.MAIN_COIN] ? coinNameToTicker[utils.MAIN_COIN].ticker || 'MC' : 'MC';
   
