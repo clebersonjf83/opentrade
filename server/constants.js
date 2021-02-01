@@ -25,9 +25,9 @@ exports.share = {
    TRADE_COMISSION: 0.001, //change trade comission percent
    DUST_VOLUME: 0.000001, //change minimal order volume
    
-   TRADE_MAIN_COIN: "Dogecoin",
-   TRADE_MAIN_COIN_TICKER: "DOGE",
-   TRADE_DEFAULT_PAIR: "FreakChain"
+   TRADE_MAIN_COIN: "FreakChain",
+   TRADE_MAIN_COIN_TICKER: "FREAK",
+   TRADE_DEFAULT_PAIR: "Dogecoin"
 };
 
 exports.SESSION_TIME = 3600*1000; //one hour
