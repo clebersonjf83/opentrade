@@ -139,7 +139,7 @@ function CommonRender(req, res, page)
 function onMain(req, res)
 {
     //index.Show(req, res);
-    CommonRender(req, res, 'server/pages/index');
+    CommonRender(req, res, 'pages/index');
 }
 
 function onGetAPIKeys(req, res)
