@@ -364,13 +364,6 @@ pre {
     color: #8b929b;
     margin-right: 4px;
 }
-
-div.form
-{
-    display: block !important;
-    text-align: center !important;
-}
-
 form
 {
     display: inline-block !important;
