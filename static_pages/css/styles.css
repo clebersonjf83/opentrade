@@ -315,6 +315,10 @@
 	border-color: #272727;
 	}
 
+body {
+	text-align: center;
+}
+
 pre {
     display: block;
     padding: 9.5px;
@@ -365,13 +369,13 @@ pre {
     margin-right: 4px;
 }
 
-.div.form
+div.form
 {
     display: block;
     text-align: center;
 }
 
-.form
+form
 {
     display: inline-block;
     margin: 0 auto !important;
