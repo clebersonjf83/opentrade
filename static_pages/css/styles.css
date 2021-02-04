@@ -365,6 +365,20 @@ pre {
     margin-right: 4px;
 }
 
+div.form
+{
+    display: block;
+    text-align: center;
+}
+
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
 .container {
     max-width: 100%;
 }
