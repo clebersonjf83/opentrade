@@ -375,7 +375,8 @@ form
 {
     display: inline-block;
     margin: 0 auto !important;
-    text-align: left;
+	text-align: left;
+	max-width: 250px;
 }
 
 .container {
