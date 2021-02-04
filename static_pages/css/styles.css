@@ -328,9 +328,6 @@ pre {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-alert{
-	text-align: center;
-}
 
 .bg-light {
 	background-color: rgba(255,255,255,.5);
