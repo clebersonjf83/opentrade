@@ -365,13 +365,13 @@ pre {
     margin-right: 4px;
 }
 
-div.form
+.div.form
 {
     display: block;
     text-align: center;
 }
 
-form
+.form
 {
     display: inline-block;
     margin: 0 auto !important;
