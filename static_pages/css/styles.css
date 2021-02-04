@@ -364,12 +364,6 @@ pre {
     color: #8b929b;
     margin-right: 4px;
 }
-form
-{
-    display: inline-block !important;
-    margin: 0 auto !important;
-	text-align: left;
-}
 
 .container {
     max-width: 100%;
