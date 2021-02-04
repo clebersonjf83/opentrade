@@ -10,7 +10,7 @@ exports.Encrypt = function(str)
 
     const key = g_constants.password_private_suffix;
     
-    const cipher = g_crypto.createCipheriv(algorithm, key, iv);
+    const cipher = g_crypto.createCipher(algorithm, key);
     
     let ciphered = cipher.update(escape(str), inputEncoding, outputEncoding);
     ciphered += cipher.final(outputEncoding);
@@ -26,7 +26,7 @@ exports.Decrypt = function(str)
 
     const key = g_constants.password_private_suffix;
     
-    const decipher = g_crypto.createDecipheriv(algorithm, key, iv);
+    const decipher = g_crypto.createDecipher(algorithm, key);
     
     let deciphered = decipher.update(str, outputEncoding, inputEncoding);
     deciphered += decipher.final(inputEncoding);
