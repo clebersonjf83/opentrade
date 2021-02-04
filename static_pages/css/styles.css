@@ -367,16 +367,15 @@ pre {
 
 div.form
 {
-    display: block;
+    display: block !important;
     text-align: center !important;
 }
 
 form
 {
-    display: inline-block;
+    display: inline-block !important;
     margin: 0 auto !important;
 	text-align: left;
-	max-width: 250px;
 }
 
 .container {
