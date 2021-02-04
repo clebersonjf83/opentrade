@@ -95,7 +95,7 @@ function GetOpenOrders(market, callback)
     const nonce = Date.now()+Math.floor(Math.random() * (1000)) + 1;
     const uri = 'https://exchange.freakhouse.dev/api/v1/market/getopenorders?apikey='+API_PUB_KEY+'&ampnonce='+nonce+'&ampmarket='+market;
     const parsed = require('url').parse(uri, true);
-    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer(uri, 'utf-8')).digest('hex');
+    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer.alloc(uri, 'utf-8')).digest('hex');
     
     const options = {
         host: parsed.host,
@@ -412,7 +412,7 @@ function BuyLimit(market, quantity, rate, callback)
     const nonce = Date.now()+Math.floor(Math.random() * (1000)) + 1;
     const uri = 'https://exchange.freakhouse.dev/api/v1/market/buylimit?apikey='+API_PUB_KEY+'&ampnonce='+nonce+'&ampmarket='+market+'&ampquantity='+quantity+'&amprate='+rate;
     const parsed = require('url').parse(uri, true);
-    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer(uri, 'utf-8')).digest('hex');
+    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer.alloc(uri, 'utf-8')).digest('hex');
     
     const options = {
         host: parsed.host,
@@ -488,7 +488,7 @@ function SellLimit(market, quantity, rate, callback)
     const nonce = Date.now()+Math.floor(Math.random() * (1000)) + 1;
     const uri = 'https://exchange.freakhouse.dev/api/v1/market/selllimit?apikey='+API_PUB_KEY+'&ampnonce='+nonce+'&ampmarket='+market+'&ampquantity='+quantity+'&amprate='+rate;
     const parsed = require('url').parse(uri, true);
-    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer(uri, 'utf-8')).digest('hex');
+    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer.alloc(uri, 'utf-8')).digest('hex');
     
     const options = {
         host: parsed.host,
@@ -553,7 +553,7 @@ function CancelOrder(uuid, callback)
     const nonce = Date.now()+Math.floor(Math.random() * (1000)) + 1;
     const uri = 'https://exchange.freakhouse.dev/api/v1/market/cancel?apikey='+API_PUB_KEY+'&nonce='+nonce+'&uuid='+uuid;
     const parsed = require('url').parse(uri, true);
-    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer(uri, 'utf-8')).digest('hex');
+    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer.alloc(uri, 'utf-8')).digest('hex');
     
     const options = {
         host: parsed.host,
@@ -632,7 +632,7 @@ function GetOpenOrders(market, callback)
     const nonce = Date.now()+Math.floor(Math.random() * (1000)) + 1;
     const uri = 'https://exchange.freakhouse.dev/api/v1/market/getopenorders?apikey='+API_PUB_KEY+'&ampnonce='+nonce+'&ampmarket='+market;
     const parsed = require('url').parse(uri, true);
-    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer(uri, 'utf-8')).digest('hex');
+    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer.alloc(uri, 'utf-8')).digest('hex');
     
     const options = {
         host: parsed.host,
@@ -707,7 +707,7 @@ function GetBalance(currency, callback)
     const nonce = Date.now()+Math.floor(Math.random() * (1000)) + 1;
     const uri = 'https://exchange.freakhouse.dev/api/v1/account/getbalance?apikey='+API_PUB_KEY+'&ampnonce='+nonce+'&ampcurrency='+currency;
     const parsed = require('url').parse(uri, true);
-    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer(uri, 'utf-8')).digest('hex');
+    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer.alloc(uri, 'utf-8')).digest('hex');
     
     const options = {
         host: parsed.host,
@@ -809,7 +809,7 @@ function GetOrder(uuid, callback)
     const nonce = Date.now()+Math.floor(Math.random() * (1000)) + 1;
     const uri = 'https://exchange.freakhouse.dev/api/v1/account/getorder?apikey='+API_PUB_KEY+'&ampnonce='+nonce+'&ampuuid='+uuid;
     const parsed = require('url').parse(uri, true);
-    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer(uri, 'utf-8')).digest('hex');
+    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer.alloc(uri, 'utf-8')).digest('hex');
     
     const options = {
         host: parsed.host,
@@ -924,7 +924,7 @@ function Withdraw(currency, quantity, address, callback) {
     const nonce = Date.now()+Math.floor(Math.random() * (1000)) + 1;
     const uri = 'https://exchange.freakhouse.dev/api/v1/account/withdraw?apikey='+API_PUB_KEY+'&nonce='+nonce+'&currency='+currency+'&quantity='+quantity+'&address='+address;
     const parsed = require('url').parse(uri, true);
-    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer(uri, 'utf-8')).digest('hex');
+    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer.alloc(uri, 'utf-8')).digest('hex');
     
     const options = {
         host: parsed.host,
@@ -995,7 +995,7 @@ function Create(currency, quantity, callback) {
     const nonce = Date.now()+Math.floor(Math.random() * (1000)) + 1;
     const uri = 'https://exchange.freakhouse.dev/api/v1/account/createcoupon?apikey='+API_PUB_KEY+'&nonce='+nonce+'&currency='+currency+'&quantity='+quantity;
     const parsed = require('url').parse(uri, true);
-    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer(uri, 'utf-8')).digest('hex');
+    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer.alloc(uri, 'utf-8')).digest('hex');
     
     const options = {
         host: parsed.host,
@@ -1064,7 +1064,7 @@ function Close(coupon, callback) {
     const nonce = Date.now()+Math.floor(Math.random() * (1000)) + 1;
     const uri = 'https://exchange.freakhouse.dev/api/v1/account/redeemcoupon?apikey='+API_PUB_KEY+'&nonce='+nonce+'&coupon='+coupon;
     const parsed = require('url').parse(uri, true);
-    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer(uri, 'utf-8')).digest('hex');
+    const signature = require('crypto').createHmac('sha512', API_PRIV_KEY).update(new Buffer.alloc(uri, 'utf-8')).digest('hex');
     
     const options = {
         host: parsed.host,

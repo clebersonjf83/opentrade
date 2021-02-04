@@ -31,8 +31,8 @@ function send(userID, coin, command, params, callback)
 
     const headers = {
         'Content-Type': 'text/plain', 
-        'Coin-Info': new Buffer(JSON.stringify({name: coin.name, ticker: coin.ticker, hostname: parsed.hostname, port: parsed.port})).toString('base64'),
-        'Authorization': 'Basic ' + new Buffer(user + ':' + rpc_password).toString('base64')
+        'Coin-Info': new Buffer.alloc(JSON.stringify({name: coin.name, ticker: coin.ticker, hostname: parsed.hostname, port: parsed.port})).toString('base64'),
+        'Authorization': 'Basic ' + new Buffer.alloc(user + ':' + rpc_password).toString('base64')
     }
     
     const host = g_constants.ACCOUNTS_SERVER; //(command == 'getinfo') ? g_constants.ACCOUNTS_SERVER : parsed.hostname;
