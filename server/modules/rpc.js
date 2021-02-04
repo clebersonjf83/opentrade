@@ -50,10 +50,8 @@ function send(userID, coin, command, params, callback)
                     
                 if (!result.data['error'] && result.data['result'] != undefined)
                     result.data = result.data.result;
-                else if (!result.data['error'] && result.data['id'] != undefined)
-                    result['success'] = 'success';
                 else
-                    result['success'] = false;
+                    result['success'] = false; 
             }
             catch(e) {
                 console.log('rpcPostJSON: '+e.message);
