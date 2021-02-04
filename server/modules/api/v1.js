@@ -16,7 +16,7 @@ let g_Cache = {};
 function sig(str, key)
 {
   return crypto.createHmac('sha512', key)
-    .update(new Buffer.alloc(str, 'utf-8'))
+    .update(new Buffer(str, 'utf-8'))
     .digest('hex');
 }
 

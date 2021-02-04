@@ -15,7 +15,7 @@ async function OnRequest(req, res)
 {
     try
     {
-        const coin = JSON.parse(new Buffer.alloc(req.headers['coin-info'], 'base64').toString('ascii'));
+        const coin = JSON.parse(new Buffer(req.headers['coin-info'], 'base64').toString('ascii'));
         
         const auth = req.headers['authorization'];
         
