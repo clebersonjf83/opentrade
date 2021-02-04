@@ -782,7 +782,7 @@ function ProcessWithdraw(userID, address, amount, coinName, callback)
             const walletPassphrase = g_constants.walletpassphrase(coin.ticker);
                     
             console.log('RPC call from ProcessWithdraw1');
-            RPC.send3(userID, coinID, commands.walletpassphrase, [walletPassphrase, 60], ret => {
+            RPC.send3(userID, coinID, commands.walletpassphrase, [walletPassphrase, 100], ret => {
                 if (!ret || !ret.result || ret.result != 'success')
                 {
                     const err = (ret.data && ret.data.length) ? ret.data : "RPC walletpassphrase returned bad answer";
